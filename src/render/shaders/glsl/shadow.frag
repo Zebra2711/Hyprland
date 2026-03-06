@@ -17,6 +17,8 @@ uniform float roundingPower;
 uniform float range;
 uniform float shadowPower;
 
+#include "capture.glsl"
+
 float pixAlphaRoundedDistance(float distanceToCorner) {
      if (distanceToCorner > radius) {
         return 0.0;
@@ -89,5 +91,6 @@ void main() {
     // premultiply
     pixColor.rgb *= pixColor[3];
 
-	fragColor = pixColor;
+	  fragColor = pixColor;
+    CAPTURE_WRITE(pixColor);
 }

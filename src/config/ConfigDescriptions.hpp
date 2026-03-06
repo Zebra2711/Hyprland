@@ -1358,6 +1358,12 @@ inline static const std::vector<SConfigOptionDescription> CONFIG_OPTIONS = {
         .data        = SConfigOptionDescription::SBoolData{true},
     },
     SConfigOptionDescription{
+        .value       = "misc:noscreenshare_blackout",
+        .description = "controls how surfaces marked noscreenshare appear in screencopy",
+        .type        = CONFIG_OPTION_INT,
+        .data        = SConfigOptionDescription::SBoolData{true},
+    },
+    SConfigOptionDescription{
         .value       = "misc:disable_scale_notification",
         .description = "disables notification popup when a monitor fails to set a suitable scale and falls back to suggested",
         .type        = CONFIG_OPTION_BOOL,
